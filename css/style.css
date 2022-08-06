@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: monospace;
+}
+.repos-container {
+    width: 100%;
+    background-color: #F6f6f6;
+    margin: auto;
+}
+.repos-container .get-repos {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #eee;
+}
+.repos-container .get-repos input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    font-size: 20px;
+    height: 54px;
+}
+.repos-container .get-repos input:focus {
+    outline: 2px solid #F44336;
+}
+.repos-container .get-repos .get-button {
+    width: 140px;
+    margin-left: 10px;
+    height: 54px;
+    background-color: #F44336;
+    color: #FFF;
+    line-height: 54px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.repos-container .show-data {
+    background-color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.repos-container .show-data .main-mess {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px);
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem
+}
+.repos-container .show-data .repo-cont {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: calc(50% - 40px);
+    margin: 20px;
+    background-color: #EEEE;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #eee;
+    transition: all 0.5s;
+    overflow-wrap: break-word;
+}
+.repos-container .show-data .repo-cont:hover {
+    transform: scale(1.02);
+    border: 2px solid #F44336;
+}
+.repos-container .show-data .repo-cont h2 {
+    color: #770a02;
+    font-size: 35px;
+}
+.repos-container .show-data .repo-cont .repo-description {
+    color: #000;
+    margin: 30px 0;
+    font-size: 20px;
+}
+.repos-container .show-data .repo-cont .repo-data {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-content: center;
+}
+.repos-container .show-data .repo-cont .repo-data span {
+    margin-right: 30px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.659);
+}
+.repos-container .show-data .repo-cont .repo-img {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.repos-container .show-data .repo-cont .repo-img img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media ( max-width : 450px ) {
+    .repos-container .show-data .repo-cont {
+        width: calc(100% - 40px);
+    }
+}
