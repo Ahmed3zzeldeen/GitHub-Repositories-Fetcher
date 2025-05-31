@@ -13,7 +13,7 @@ function getRepos() {
         reposData.innerHTML = "<span>Plz Write GitHub Username</span>";
     } else {
         // fetching
-        fetch(`http://api.github.com/users/${theInput.value}/repos`)
+        fetch(`https://api.github.com/users/${theInput.value}/repos`)
         .then((response) =>  response.json())
         .then((repos) => { 
             // Empty The Container
